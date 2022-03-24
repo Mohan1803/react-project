@@ -5,7 +5,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 require("dotenv").config();
 const authRoute = require("./routes/authRoute");
+const userRoute = require("./routes/userRoute");
 app.use("/auth", authRoute);
+app.use("/User", userRoute);
 // const con = db.connect();
 
 app.get("/", (req, res) => {
